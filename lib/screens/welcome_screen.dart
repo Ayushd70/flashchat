@@ -22,7 +22,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
     controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 1),
+      duration: Duration(seconds: 3),
     );
     animation =
         ColorTween(begin: Colors.red, end: Colors.white).animate(controller);
