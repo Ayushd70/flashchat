@@ -47,3 +47,5 @@ app.*.map.json
 
 #Firebase
 /android/app/google-services.json
+services.tar
+services.tar.gpg

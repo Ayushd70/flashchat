@@ -25,8 +25,10 @@ jobs:
           KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
           SIGNING_KEY:  ${{ secrets.SIGNING_KEY }}
           STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+          GOOGLE_SERVICE: ${{ secrets.GOOGLE_SERVICE }}
         run: |
           echo $SIGNING_KEY | base64 -d > android/key
+          echo $GOOGLE_SERVICE | base64 -d > android/app/google-services.json
           flutter build apk --release
       - name: Create Release
         id: create_release
@@ -34,6 +36,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          tag_name: beta-v1.0
           release_name: Flash Chat Release
           draft: false
           prerelease: false
