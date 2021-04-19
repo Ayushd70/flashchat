@@ -37,7 +37,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: beta-v1.0
-          release_name: Flash Chat Release
+          release_name: Flash Chat Android Release
           draft: false
           prerelease: false
       - name: Upload Release Asset
