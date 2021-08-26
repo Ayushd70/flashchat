@@ -36,8 +36,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: beta-v1.0
-          release_name: Flash Chat Release
+          tag_name: v2.0
+          release_name: Flash Chat Release v2.0
           draft: false
           prerelease: false
       - name: Upload Release Asset
